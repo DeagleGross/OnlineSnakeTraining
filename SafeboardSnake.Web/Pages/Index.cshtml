@@ -1,0 +1,33 @@
+﻿@page
+@model TurnDescriptor
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<body onload="loadPage()">
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>This is a snake game developed for Safeboard-Internship-Program</p>
+        
+        <p id="serverErrorMessage" hidden>
+            Server is not responding. Try again later or fix server connection!
+        </p>
+
+        <div id="gameBlock" hidden align="center">
+            <canvas id="gameboardCanvas">
+            </canvas>
+
+            <div id="turnNumberBlock">
+                <text>Game Turn Number: </text>
+                <text id="turnNumberTxt"></text>
+            </div>
+        
+            <div id="ControlsBlock" align="center">
+                <text>Use keyboard arrows to move snake</text>
+                <div>
+                    <img src="keyboard-arrows.png" width="85" height="75" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
